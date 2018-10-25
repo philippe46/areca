@@ -219,7 +219,6 @@ public class Utils implements ArecaFileConstants {
 	public static String extractShortFilePath(File fileDir, String sBaseDir) {
 		String sFileDir = FileSystemManager.getPath(fileDir);
 		int index = sBaseDir == null ? 0 : sBaseDir.length();
-
 		if (
 				OSTool.isSystemWindows()		
 				&& index == 0
@@ -232,7 +231,7 @@ public class Utils implements ArecaFileConstants {
 			// Windows dedicated code : transform c:\toto into c/toto
 			return sFileDir.charAt(0) + (sFileDir.length() > 3 ? sFileDir.substring(2) : "");
 		} else if (index < sFileDir.length()) {
-			while(sFileDir.charAt(index) == '/' || sFileDir.charAt(index) == '\\') {
+			while(index < sFileDir.length() && sFileDir.charAt(index) == File.pathSeparatorChar) {
 				index++;
 			}
 
