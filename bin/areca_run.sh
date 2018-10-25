@@ -34,6 +34,7 @@ CLASSPATH="${CLASSPATH}:${LIB_PATH}org.eclipse.jface_3.2.0.I20060605-1400.jar"
 CLASSPATH="${CLASSPATH}:/usr/lib/java/swt.jar"
 CLASSPATH="${CLASSPATH}:/usr/lib64/java/swt.jar"
 CLASSPATH="${CLASSPATH}:/usr/share/java/swt.jar"
+CLASSPATH="${CLASSPATH}:/usr/share/swt-3.8/lib/swt.jar"
 CLASSPATH="${CLASSPATH}:${LIB_PATH}swt.jar"
 CLASSPATH="${CLASSPATH}:${LIB_PATH}commons-codec-1.4.jar"
 
