@@ -66,7 +66,7 @@ look_for_java() {
 check_version() {
   JAVA_HEADER=`${JAVA_PROGRAM_DIR}java -version 2>&1 | head -n 1`
   JAVA_IMPL=`echo ${JAVA_HEADER} | cut -f1 -d' '`
-  if [ "$JAVA_IMPL" = "java" ] ; then
+  if [[ "$JAVA_IMPL" = "java" || "$JAVA_IMPL" = "openjdk" ]] ; then  
     VERSION=`echo ${JAVA_HEADER} | sed "s/java version \"\(.*\)\"/\1/"`
     if echo $VERSION | grep "^1.[0-3]" ; then
       return 1
